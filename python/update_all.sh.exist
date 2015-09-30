@@ -1,4 +1,4 @@
-export PROJECT_ID=<your-project-id>
+export PROJECT_ID=your-project-id
 
 #set gcloud account
 gcloud config set project ${PROJECT_ID}

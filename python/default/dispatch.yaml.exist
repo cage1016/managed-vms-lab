@@ -2,7 +2,7 @@ dispatch:
   - url: "*/favicon.ico"
     module: default
 
-  - url: "<your-project-id>.appspot.com/"
+  - url: "your-project-id.appspot.com/"
     module: default
 
   - url: "*/module1/*"
