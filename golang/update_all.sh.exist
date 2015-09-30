@@ -1,0 +1,15 @@
+export PROJECT_ID=<your-project-id>
+
+#set gcloud account
+gcloud config set project ${PROJECT_ID}
+
+#update sanbox module
+appcfg.py update default/app.yaml --application=${PROJECT_ID}
+
+#update managed vms
+# -q Disable all interactive prompts.
+# --force Force deploying, overriding any previous in-progress deployments to this version.
+gcloud preview app deploy module1/app.yaml --version=1 --docker-build=local -q --force
+
+#update disptach
+appcfg.py update_dispatch default --application=${PROJECT_ID}
