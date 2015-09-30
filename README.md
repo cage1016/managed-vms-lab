@@ -2,7 +2,7 @@
 
 > Google Cloud Platform Managed VMs simple lab (Golang/Python)
 
-[GAE Managed VM Introduction - Google Slides](https://goo.gl/SwuEvR) by cage.chung@gmail.com
+[GAE Managed VM Introduction - Google Slides](https://goo.gl/SwuEvR) by cage.chung@gmail.com
 
 ## Demo Managed VMs artchietcture
 ![](demo-managed-vms-architecture.jpg)
@@ -26,8 +26,7 @@ dispatch:
     module: default
 ```
 
-本次 demo lab 的架構為一個 sanbox runtime(default module) + managed VMs(module1) with automatic scaling. Route request
-可以透過 `dispatch.yaml` 的設定進行重導[1]
+本次 demo lab 的架構為一個 sanbox runtime(default module) + managed VMs(module1) with automatic scaling. Route request 可以透過 `dispatch.yaml` 的設定進行重導[1]
 
 
 ## Run locally
@@ -58,14 +57,14 @@ $ sh local_run.sh
   - \*/default/`dispatch.yaml.exist` --> \*/default/`dispatch.yaml`
   - \*/default/`update_all.sh.exist` --> \*/defalt/`update_all.sh`
   - \*default/`create_ab_test_instances.sh.exist` --> \*/default/`create_ab_test_instances.sh`
-2. 在發佈應用程式至 App Engine 之前，確認你有先在 [Google Developers Console](https://goo.gl/JkWVb9) 建立專案
-3. 設置專案 `PROJECT_ID`
+2. 在發佈應用程式至 App Engine 之前，確認你有先在 [Google Developers Console](https://goo.gl/JkWVb9) 建立專案
+3. 設置專案 `PROJECT_ID`
   - \*/default/dispatch.yaml
   - \*/default/update_all.sh
   - \*/create_ab_test_instances.sh
-4. `$ sh update_all.sh` 就會依序發佈 App Engine sandbox 及 Managed VMs 至 App Engine
+4. `$ sh update_all.sh` 就會依序發佈 App Engine sandbox 及 Managed VMs 至 App Engine
 5. 訪問
-  - default module: https://your-project-id.appspot.com/
+  - default module: https://your-project-id.appspot.com/
   - module1: https://your-project-id.appspot.com/module1/
   - module1 route: https://your-project-id.appspot.com/module1/sayhi
 
